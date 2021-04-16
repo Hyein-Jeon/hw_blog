@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <style>
+        body {
+            font-family: arial;
+            text-align: center;
+            background-color: rgb(170, 91, 137);
+
+            
+        }
+
+        .box {
+            background-color: rgb(88, 185, 230)
+            ;
+            width: 800px;
+            border: 1px solid black;
+            margin: auto;
+            width: 50%;
+            border-radius: 25px;
+            padding: 25px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Blog Project</h1>
+    <div class="container">
+    {% for blogg in blogss %}
+        <div class="box">
+        <h3>{{blogg.blog_title}}</h3>
+        <h5>{{blogg.blog_writer}}</h5>
+        {{blogg.summary_blog}} <a href = "{% url 'more' blogg.id %}">...more</a>
+        <br>
+        </div>
+        <br>
+    {% endfor %}
+    </div>
+    
+</body>
+</html>
