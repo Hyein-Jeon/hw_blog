@@ -30,9 +30,9 @@
 </head>
 <body>
     <h1>Blog Project</h1>
-    <div class="container">
+    <div class="box1">
     {% for blogg in blogss %}
-        <div class="box">
+        <div class="box2">
         <h3>{{blogg.blog_title}}</h3>
         <h5>{{blogg.blog_writer}}</h5>
         {{blogg.summary_blog}} <a href = "{% url 'more' blogg.id %}">...more</a>
